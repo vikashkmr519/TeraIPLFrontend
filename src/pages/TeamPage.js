@@ -13,7 +13,9 @@ export const TeamPage = () => {
 
   useEffect(() => {
     const fetchMatches = async () => {
-      const response = await fetch(`http://localhost:8080/team/${teamName}/4`)
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}team/${teamName}/4`,
+      )
       const data = await response.json()
       console.log(data)
       setTeam(data)

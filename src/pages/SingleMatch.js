@@ -9,7 +9,9 @@ export const SingleMatch = () => {
 
   useEffect(() => {
     const fetchMatch = async () => {
-      const response = await fetch(`http://localhost:8080/match/${matchId}`)
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}match/${matchId}`,
+      )
       const data = await response.json()
       setMatch(data)
     }
