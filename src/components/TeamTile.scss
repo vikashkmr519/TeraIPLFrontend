@@ -1,0 +1,29 @@
+.TeamTile {
+  height: 20vw;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #ffdab9;
+  overflow-wrap: break-word;
+
+  .team-name {
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3vw;
+  }
+  .text {
+    color: #330867;
+    font-size: 2vw;
+  }
+
+  .TeamTileData {
+    overflow-wrap: break-word;
+  }
+
+  &:hover {
+    height: 93%;
+    width: 95%;
+  }
+}

@@ -1,0 +1,22 @@
+.YearSelector {
+  list-style: none;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: 1px solid wheat;
+  border-radius: 5px;
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+  .list-item {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+    color: whitesmoke;
+
+    .text {
+      color: azure;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.leftArrow {
+  z-index: 1;
+  height: 60px;
+  width: 50px;
+  outline: 1px;
+  outline-color: black;
+  background: rgba(black, 0.5);
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 40px;
+  color: wheat;
+  cursor: pointer;
+}
+
+.rightArrow {
+  z-index: 1;
+  height: 60px;
+  width: 50px;
+  outline: 1px;
+  outline-color: black;
+  background: rgba(black, 0.5);
+  position: absolute;
+  top: 40%;
+  right: 32px;
+  transform: translate(0, -50%);
+  font-size: 40px;
+  color: wheat;
+  cursor: pointer;
+  text-shadow: 20px;
+
+  .right {
+    margin-left: 5px;
+  }
+}

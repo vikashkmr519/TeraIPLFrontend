@@ -1,0 +1,39 @@
+.MatchDetailCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .text {
+    color: purple;
+  }
+  .match-date,
+  .match-venue,
+  .match-result {
+    margin-top: 10px;
+  }
+
+  .additonal-detail {
+    text-align: right;
+    & > p {
+      margin-bottom: 20px;
+    }
+  }
+  .GetMatch {
+    height: 5vh;
+    width: 17vw;
+    background-color: wheat;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: azure;
+    }
+  }
+}

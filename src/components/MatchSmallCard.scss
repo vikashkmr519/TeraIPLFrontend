@@ -1,0 +1,17 @@
+.MatchSmallCard {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  height: 27vw;
+  overflow-wrap: break-word;
+
+  .match-result {
+    margin-top: 10px;
+    font-size: 1.3vw;
+  }
+
+  .text {
+    font-size: 2.5vw;
+    color: purple;
+  }
+}
