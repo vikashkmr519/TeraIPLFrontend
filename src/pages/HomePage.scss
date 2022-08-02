@@ -5,7 +5,7 @@
   }
 
   .HomePage {
-    margin: auto 40px;
+    margin: auto 10px;
 
     .header-section {
       align-self: center;
@@ -15,7 +15,7 @@
     }
 
     .app-name {
-      font-size: 4rem;
+      font-size: 6vw;
       margin: 30px;
       background: -webkit-linear-gradient(#eee, rgb(102, 119, 62));
       -webkit-background-clip: text;
@@ -24,6 +24,7 @@
 
     .team-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
       column-gap: 10px;
       row-gap: 10px;

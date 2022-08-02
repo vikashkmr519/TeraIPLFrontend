@@ -1,48 +1,74 @@
-.TeamPage {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  margin: auto 30px;
-
+.TeamPageOuter {
   .Header {
-    grid-column: span 4;
+    width: 100%;
   }
+  .TeamPage {
+    margin: auto 10px;
 
-  .team-name-section {
-    grid-column: span 3;
-    justify-self: start;
-    align-self: end;
-  }
+    .TeamPage1 {
+      display: flex;
+      justify-content: space-around;
+    }
 
-  .team-name {
-    font-size: 4rem;
-    color: black;
-  }
+    .smallCards {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
 
-  .win-loss-section {
-    justify-self: center;
-    padding: 40px;
-    text-align: center;
-  }
+      .smallCard {
+        margin: 5px;
+        width: 25%;
+      }
+    }
 
-  .match-detail-section {
-    grid-column: span 4;
-    margin-top: 20px;
-  }
+    .team-name-section {
+      grid-column: span 3;
+      justify-self: start;
+      align-self: end;
+    }
 
-  .more-link {
-    margin-left: 10vw;
-    margin-top: 11vw;
-  }
+    .team-name {
+      font-size: 2.7rem;
+      color: black;
+    }
 
-  .more {
-    align-self: center;
-    justify-self: center;
-    font-size: 2vw;
-    &:hover {
-      font-size: 2.05vw;
+    .win-loss-section {
+      justify-self: flex-end;
+      padding: 20px;
+      text-align: end;
+      width: 20vw;
+    }
+
+    .match-detail-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 5px;
+      right: 5px;
+      margin-top: 20px;
+    }
+
+    .more-link {
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh;
+      width: 7vw;
+      background-color: bisque;
+      margin-left: 10vw;
+      margin-top: 9vw;
+    }
+
+    .more {
+      align-self: center;
+      justify-self: center;
+      font-size: 1.8vw;
+      &:hover {
+        font-size: 2.05vw;
+      }
     }
   }
 }

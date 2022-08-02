@@ -18,9 +18,14 @@
 
       & > p {
         & > span {
-          font-size: 1.1rem;
+          font-size: 2.3vw;
           font-weight: 800;
         }
+        font-size: 2.1vw;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 27vw;
       }
     }
 
@@ -33,6 +38,17 @@
       align-items: flex-end;
       padding-right: 10px;
       flex-direction: column;
+
+      & > h2 {
+        font-size: 2.3vw;
+      }
+      & > p {
+        font-size: 2vw;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 27vw;
+      }
     }
   }
 
@@ -43,6 +59,14 @@
     box-shadow: 10px 10px 10px gray;
     margin: 20px;
     background-color: wheat;
+
+    & > h2 {
+      font-size: 4.3vw;
+    }
+
+    & > p {
+      font-size: 2.5vw;
+    }
   }
 
   .venue {
@@ -50,15 +74,20 @@
     border-radius: 10px;
     margin: 20px;
     box-shadow: 10px 10px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .venueText {
       padding: 10px;
       margin-left: 20px;
+      font-size: 4vw;
     }
 
     .venueOutput {
       padding: 10px;
       margin-left: 10px;
+      font-size: 3vw;
     }
   }
 
@@ -75,7 +104,12 @@
       background-color: wheat;
 
       & > p > span {
+        font-size: 3vw;
         font-weight: 800;
+      }
+
+      & > p {
+        font-size: 2vw;
       }
     }
   }
@@ -85,11 +119,15 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px gray;
-    font-size: 1.7vw;
+    font-size: 2vw;
     font-weight: 500;
     display: flex;
     justify-content: center;
     background-color: green;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3vw;
+    }
   }
 
   .manOfTheMatch {
