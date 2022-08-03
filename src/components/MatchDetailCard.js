@@ -36,7 +36,7 @@ export const MatchDetailCard = ({ teamName, match }) => {
           </div>
         </div>
         <div className="additonal-detail">
-          <h3>First Innings</h3>
+          <h3 className="h3">First Innings</h3>
           <p>{match.team1}</p>
           <h3>Second Innings</h3>
           <p>{match.team2}</p>

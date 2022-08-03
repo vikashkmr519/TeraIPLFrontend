@@ -135,7 +135,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 10px gray;
-    font-size: 1vw;
+    font-size: 2vw;
 
     display: flex;
     justify-content: center;
@@ -144,5 +144,9 @@
     background: -webkit-linear-gradient(top left, #85d5e5, #2760b5);
     background: -moz-linear-gradient(top left, #85d5e5, #2760b5);
     background: linear-gradient(to bottom right, #85d5e5, #2760b5);
+
+    @media screen and (max-width: 600px) {
+      font-size: 3vw;
+    }
   }
 }

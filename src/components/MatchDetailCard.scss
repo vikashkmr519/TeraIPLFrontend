@@ -1,5 +1,6 @@
 .MatchDetailCard {
   width: 90vw;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 10px;
@@ -9,18 +10,27 @@
 
   .text {
     color: purple;
-    font-size: 2.5rem;
+    font-size: 5vw;
   }
   .match-date,
   .match-venue,
   .match-result {
     margin-top: 10px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3vw;
+    }
   }
 
   .additonal-detail {
     text-align: right;
-    & > p {
-      margin-bottom: 20px;
+    & > p,
+    h3 {
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 3vw;
+      }
     }
   }
   .GetMatch {
@@ -32,10 +42,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
     &:hover {
       background-color: azure;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 3vw;
     }
   }
 }
