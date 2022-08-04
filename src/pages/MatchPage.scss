@@ -8,8 +8,14 @@
       display: flex;
       flex-direction: row;
       overflow-x: auto;
-      margin: 20px;
-      height: 80px;
+      margin-left: 50px;
+      margin-right: 50px;
+      height: 100px;
+
+      @media screen and (max-width: 700px) {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
 
       &::-webkit-scrollbar {
         width: 0;
@@ -32,7 +38,7 @@
           padding: 10px;
 
           @media screen and (max-width: 600px) {
-            height: 230px;
+            height: 70vw;
           }
         }
       }
@@ -42,6 +48,9 @@
       margin-bottom: 20px;
       color: chocolate;
       font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @media screen and (max-width: 600px) {
         font-size: 3.5vw;

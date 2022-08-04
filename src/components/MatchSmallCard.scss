@@ -1,6 +1,6 @@
 .MatchSmallCard {
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
   border-radius: 10px;
   height: 27vw;
   overflow-wrap: break-word;
@@ -8,10 +8,24 @@
   .match-result {
     margin-top: 10px;
     font-size: 1.3vw;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 3vw;
+    }
+  }
+
+  .vs {
+    font-size: 2.5vw;
   }
 
   .text {
     font-size: 2.5vw;
     color: purple;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3.5vw;
+    }
   }
 }
