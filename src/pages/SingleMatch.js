@@ -109,6 +109,30 @@ export const SingleMatch = () => {
             <h2>{match.venue}</h2>
           </div>
         </div>
+        <div className="toss">
+          <div className="tossInside rotate">
+            <h3>Toss Winner</h3>
+            <p>{match.tossWinner}</p>
+          </div>
+          <div className="tossInside rotate">
+            <h3>Toss Decision</h3>
+            <p>{match.tossDecision}</p>
+          </div>
+        </div>
+        <div className="winner">
+          <div className="winnerName pulse">
+            <h3>Winner</h3>
+            <h2>
+              {match.winningTeam} won by {match.margin} {match.wonBy}
+            </h2>
+          </div>
+        </div>
+        <div className="manOfMatch">
+          <div className="playerName"></div>
+        </div>
+        <div className="umpires">
+          <div className="umpire"></div>
+        </div>
       </div>
     </div>
   )

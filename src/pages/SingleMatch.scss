@@ -33,6 +33,15 @@ $duration: 0.3s;
   }
 }
 
+@keyframes pulse {
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .SingleMatch {
   // color: black;
   // .top-data {
@@ -238,7 +247,7 @@ $duration: 0.3s;
       background-color: white;
       flex-direction: column;
       font-size: 2vw;
-      border-radius: 20px;
+      border-radius: 10px;
 
       & > h2 {
         display: flex;
@@ -257,7 +266,7 @@ $duration: 0.3s;
       color: black;
       background-color: white;
       font-size: 2vw;
-      border-radius: 20px;
+      border-radius: 10px;
     }
 
     .date {
@@ -271,7 +280,7 @@ $duration: 0.3s;
       background-color: white;
       flex-direction: column;
       font-size: 2vw;
-      border-radius: 20px;
+      border-radius: 10px;
     }
 
     & > div:hover {
@@ -344,6 +353,107 @@ $duration: 0.3s;
       align-items: center;
       width: 50%;
       font-size: 2.7vw;
+    }
+  }
+
+  .toss {
+    height: 30vw;
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .tossInside {
+      width: 21vw;
+      height: 21vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      color: #f97d8e;
+
+      & > h3 {
+        font-size: 3vw;
+      }
+      & > p {
+        font-size: 2vw;
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .winner {
+    height: 30vw;
+    background-color: #b1bfd8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .winnerName {
+      height: 25vw;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      border-radius: 10px;
+      background-color: #90d5ec;
+      background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+
+      & > h3 {
+        font-size: 3vw;
+      }
+      & > h2 {
+        display: none;
+        font-size: 3vw;
+      }
+
+      &:hover {
+        & > h3 {
+          display: none;
+        }
+        & > h2 {
+          display: flex;
+        }
+        background-color: #3bb78f;
+        background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+      }
+    }
+  }
+
+  .manOfMatch {
+    height: 30vw;
+    background-color: #eec0c6;
+  }
+
+  .umpires {
+    height: 30vw;
+    background-color: aquamarine;
+  }
+
+  .rotate {
+    transition-duration: $duration;
+    transiton-property: transform;
+
+    &:hover {
+      transform: rotate(45deg);
+    }
+  }
+
+  .pulse {
+    @include disableTapHighlightColor();
+    @include hardwareAccel();
+
+    &:hover {
+      animation-name: pulse;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
     }
   }
 }
