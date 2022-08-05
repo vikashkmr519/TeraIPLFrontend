@@ -23,7 +23,7 @@ export const SingleMatch = () => {
     <div>
       <Header />
       <div className="SingleMatch">
-        <div className="top-data">
+        {/* <div className="top-data">
           <div className="gsd">
             <p>
               <span>Game number : </span> {match.gameNumber}
@@ -75,6 +75,39 @@ export const SingleMatch = () => {
         <div className="manOfTheMatch">
           <h2>Man Of The Match : </h2>
           <h2>{match.playerOfMatch}</h2>
+        </div> */}
+        <div className="teamVsTeamBlock">
+          <div className="firstTeam">
+            <p className="teamName">{match.team1}</p>
+          </div>
+          <div className="secondTeam">
+            <p className="teamName">{match.team2}</p>
+          </div>
+        </div>
+        <div className="gsd">
+          <div className="gameNumber hover">
+            <h3>Game Number</h3>
+            <p>{match.gameNumber}</p>
+          </div>
+          <div className="season hover">
+            <h3>Season</h3>
+            <p>{match.season}</p>
+          </div>
+          <div className="date hover">
+            <h3>Date</h3>
+            <p>{match.date}</p>
+          </div>
+        </div>
+        <div className="venue">
+          <div className="venueImage">
+            <img
+              src="https://t3.ftcdn.net/jpg/04/90/22/02/360_F_490220283_UKOlZwb2pS3wAbpqJkconjzfAx3JpIbT.jpg"
+              alt="venueImage"
+            ></img>
+          </div>
+          <div className="venueName">
+            <h2>{match.venue}</h2>
+          </div>
         </div>
       </div>
     </div>

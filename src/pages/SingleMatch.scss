@@ -1,152 +1,349 @@
+$duration: 0.3s;
+
+@mixin disableTapHighlightColor() {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+  transform: translateZ(0);
+}
+
+@keyframes hover {
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes shadow {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+
 .SingleMatch {
-  color: black;
-  .top-data {
+  // color: black;
+  // .top-data {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin: 20px;
+  //   padding: 20px;
+
+  //   .gsd {
+  //     box-shadow: 0px 0px 2px 2px gray;
+  //     border-radius: 10px;
+  //     width: 20vw;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: flex-start;
+  //     padding-left: 20px;
+
+  //     & > p {
+  //       & > span {
+  //         font-size: 2.3vw;
+  //         font-weight: 800;
+  //       }
+  //       font-size: 2.1vw;
+  //     }
+
+  //     @media screen and (max-width: 400px) {
+  //       width: 27vw;
+  //     }
+  //   }
+
+  //   .umpires {
+  //     box-shadow: 0px 0px 2px 2px gray;
+  //     border-radius: 10px;
+  //     width: 20vw;
+  //     display: flex;
+  //     justify-content: space-evenly;
+  //     align-items: flex-end;
+  //     padding-right: 10px;
+  //     flex-direction: column;
+
+  //     & > h2 {
+  //       font-size: 2.3vw;
+  //     }
+  //     & > p {
+  //       font-size: 2vw;
+  //     }
+
+  //     @media screen and (max-width: 400px) {
+  //       width: 27vw;
+  //     }
+  //   }
+  // }
+
+  // .teamvs {
+  //   display: flex;
+  //   justify-content: space-around;
+  //   border-radius: 10px;
+  //   box-shadow: 10px 10px 10px gray;
+  //   margin: 20px;
+  //   background-color: wheat;
+
+  //   & > h2 {
+  //     font-size: 4.3vw;
+  //   }
+
+  //   & > p {
+  //     font-size: 2.5vw;
+  //   }
+  // }
+
+  // .venue {
+  //   display: flex;
+  //   border-radius: 10px;
+  //   margin: 20px;
+  //   box-shadow: 10px 10px 10px gray;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   .venueText {
+  //     padding: 10px;
+  //     margin-left: 20px;
+  //     font-size: 4vw;
+  //   }
+
+  //   .venueOutput {
+  //     padding: 10px;
+  //     margin-left: 10px;
+  //     font-size: 3vw;
+  //   }
+  // }
+
+  // .toss {
+  //   display: flex;
+  //   margin: 20px;
+  //   justify-content: space-around;
+
+  //   & > div {
+  //     box-shadow: 10px 10px 10px gray;
+  //     border-radius: 10px;
+  //     padding: 20px;
+  //     margin: 10px;
+  //     background-color: wheat;
+
+  //     & > p > span {
+  //       font-size: 3vw;
+  //       font-weight: 800;
+  //     }
+
+  //     & > p {
+  //       font-size: 2vw;
+  //     }
+  //   }
+  // }
+
+  // .winner {
+  //   margin: 20px;
+  //   padding: 20px;
+  //   border-radius: 20px;
+  //   box-shadow: 10px 10px 10px gray;
+  //   font-size: 2vw;
+  //   font-weight: 500;
+  //   display: flex;
+  //   justify-content: center;
+  //   background-color: green;
+
+  //   @media screen and (max-width: 600px) {
+  //     font-size: 3vw;
+  //   }
+  // }
+
+  // .manOfTheMatch {
+  //   margin: 20px;
+  //   padding: 10px;
+  //   border-radius: 10px;
+  //   box-shadow: 10px 10px 10px gray;
+  //   font-size: 2vw;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   /* Created with https://www.css-gradient.com */
+  //   background: #85d5e5;
+  //   background: -webkit-linear-gradient(top left, #85d5e5, #2760b5);
+  //   background: -moz-linear-gradient(top left, #85d5e5, #2760b5);
+  //   background: linear-gradient(to bottom right, #85d5e5, #2760b5);
+
+  //   @media screen and (max-width: 600px) {
+  //     font-size: 3vw;
+  //   }
+  // }
+
+  .teamVsTeamBlock {
+    height: 35vw;
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    padding: 20px;
 
-    .gsd {
-      box-shadow: 0px 0px 2px 2px gray;
-      border-radius: 10px;
-      width: 20vw;
+    .firstTeam {
+      width: 50%;
+      background-color: #eec0c6;
+      background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+      height: inherit;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      padding-left: 20px;
+      align-items: center;
 
-      & > p {
-        & > span {
-          font-size: 2.3vw;
-          font-weight: 800;
-        }
-        font-size: 2.1vw;
-      }
-
-      @media screen and (max-width: 400px) {
-        width: 27vw;
+      .teamName {
+        font-size: 4vw;
+        color: darkolivegreen;
+        font-weight: 700;
       }
     }
+    .secondTeam {
+      width: 50%;
+      background-color: #90d5ec;
+      background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
 
-    .umpires {
-      box-shadow: 0px 0px 2px 2px gray;
-      border-radius: 10px;
-      width: 20vw;
       display: flex;
-      justify-content: space-evenly;
-      align-items: flex-end;
-      padding-right: 10px;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      & > h2 {
-        font-size: 2.3vw;
-      }
-      & > p {
-        font-size: 2vw;
-      }
-
-      @media screen and (max-width: 400px) {
-        width: 27vw;
+      .teamName {
+        font-size: 4vw;
+        color: darkolivegreen;
+        font-weight: 700;
       }
     }
   }
 
-  .teamvs {
+  .gsd {
+    background-color: wheat;
+    height: 35vw;
     display: flex;
     justify-content: space-around;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px gray;
-    margin: 20px;
-    background-color: wheat;
+    align-items: center;
+    .gameNumber {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vw;
+      box-shadow: 3px 3px 4px gray;
+      width: 20vw;
+      color: black;
+      background-color: white;
+      flex-direction: column;
+      font-size: 2vw;
+      border-radius: 20px;
 
-    & > h2 {
-      font-size: 4.3vw;
+      & > h2 {
+        display: flex;
+        justify-content: center;
+      }
     }
 
-    & > p {
-      font-size: 2.5vw;
+    .season {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 20vw;
+      box-shadow: 3px 3px 4px gray;
+      width: 20vw;
+      color: black;
+      background-color: white;
+      font-size: 2vw;
+      border-radius: 20px;
+    }
+
+    .date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vw;
+      color: black;
+      box-shadow: 3px 3px 4px gray;
+      width: 20vw;
+      background-color: white;
+      flex-direction: column;
+      font-size: 2vw;
+      border-radius: 20px;
+    }
+
+    & > div:hover {
+      box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .hover {
+    position: relative;
+    transition-duration: $duration;
+    transition-property: transform;
+
+    @include disableTapHighlightColor();
+    @include hardwareAccel();
+
+    &:before {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 0;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0) 80%
+      ); /* W3C */
+      transition-duration: $duration;
+      transition-property: transform opacity;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      animation-name: hover;
+      animation-duration: 1.5s;
+      animation-delay: $duration;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      &:before {
+        opacity: 0.6;
+        transform: translateY(6px);
+        animation-name: shadow;
+        animation-duration: 1.5s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
     }
   }
 
   .venue {
+    height: 25.7vw;
     display: flex;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 10px 10px 10px gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .venueText {
-      padding: 10px;
-      margin-left: 20px;
-      font-size: 4vw;
+    .venueImage {
+      display: flex;
+      width: 50%;
     }
 
-    .venueOutput {
-      padding: 10px;
-      margin-left: 10px;
-      font-size: 3vw;
-    }
-  }
-
-  .toss {
-    display: flex;
-    margin: 20px;
-    justify-content: space-around;
-
-    & > div {
-      box-shadow: 10px 10px 10px gray;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
-      background-color: wheat;
-
-      & > p > span {
-        font-size: 3vw;
-        font-weight: 800;
-      }
-
-      & > p {
-        font-size: 2vw;
-      }
-    }
-  }
-
-  .winner {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px gray;
-    font-size: 2vw;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    background-color: green;
-
-    @media screen and (max-width: 600px) {
-      font-size: 3vw;
-    }
-  }
-
-  .manOfTheMatch {
-    margin: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px gray;
-    font-size: 2vw;
-
-    display: flex;
-    justify-content: center;
-    /* Created with https://www.css-gradient.com */
-    background: #85d5e5;
-    background: -webkit-linear-gradient(top left, #85d5e5, #2760b5);
-    background: -moz-linear-gradient(top left, #85d5e5, #2760b5);
-    background: linear-gradient(to bottom right, #85d5e5, #2760b5);
-
-    @media screen and (max-width: 600px) {
-      font-size: 3vw;
+    .venueName {
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      font-size: 2.7vw;
     }
   }
 }

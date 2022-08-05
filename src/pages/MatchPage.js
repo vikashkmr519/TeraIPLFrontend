@@ -28,7 +28,7 @@ export const MatchPage = () => {
           Matches of {teamName} in {year}
         </h1>
         <div className="year-selector">
-          <YearSelector teamName={teamName} />
+          <YearSelector className="yearItem" teamName={teamName} />
         </div>
         <div className="inner-content">
           <div className="matchDetailCards">
