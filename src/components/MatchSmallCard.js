@@ -12,6 +12,7 @@ export const MatchSmallCard = ({ teamName, match }) => {
       className={
         isMatchWon ? 'MatchSmallCard won-card' : 'MatchSmallCard lost-card'
       }
+      key={match.id}
     >
       <span className="vs">vs</span>
       <h3>

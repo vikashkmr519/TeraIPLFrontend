@@ -17,7 +17,6 @@ export const TeamPage = () => {
         `${process.env.REACT_APP_BACKEND_URL}team/${teamName}/4`,
       )
       const data = await response.json()
-      console.log(data)
       setTeam(data)
     }
     fetchMatches()
@@ -57,12 +56,11 @@ export const TeamPage = () => {
         </div>
         <div className="smallCards">
           {team.matches.slice(1).map((match) => (
-            <div className="smallCard">
+            <div className="smallCard" key={match.id}>
               <MatchSmallCard
                 className="smallCard"
                 teamName={team.teamName}
                 match={match}
-                key={match.id}
               />
             </div>
           ))}
@@ -70,6 +68,7 @@ export const TeamPage = () => {
           <div className="more-link">
             <Link
               to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}
+              key={'link'}
             >
               <p className="more">More>></p>
             </Link>
