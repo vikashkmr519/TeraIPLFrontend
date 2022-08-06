@@ -253,11 +253,17 @@ $duration: 0.3s;
 
       & > h3 {
         font-size: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       & > p {
-        font-size: 2vw;
+        font-size: 1.7vw;
         color: black;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
