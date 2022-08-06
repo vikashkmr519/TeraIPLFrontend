@@ -25,9 +25,8 @@
       color: azure;
       margin-left: 20px;
       &:hover {
-        background-color: azure;
+        color: #ffa500;
         border-radius: 2px;
-        color: black;
       }
       @media screen and (max-width: 400px) {
         font-size: 1rem;

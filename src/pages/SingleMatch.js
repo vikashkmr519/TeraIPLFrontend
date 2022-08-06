@@ -128,10 +128,20 @@ export const SingleMatch = () => {
           </div>
         </div>
         <div className="manOfMatch">
-          <div className="playerName"></div>
+          <div className="playerName shake">
+            <h3>Player Of the Match</h3>
+            <h2>{match.playerOfMatch}</h2>
+          </div>
         </div>
         <div className="umpires">
-          <div className="umpire"></div>
+          <div className="umpire hover">
+            <h3>Umpire 1</h3>
+            <h2>{match.umpire1}</h2>
+          </div>
+          <div className="umpire hover">
+            <h3>Umpire 2</h3>
+            <h2>{match.umpire2}</h2>
+          </div>
         </div>
       </div>
     </div>
